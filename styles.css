@@ -1,0 +1,89 @@
+@keyframes button-press{
+ from {    -moz-box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.3)}
+ to {
+    -moz-box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.0);
+    -webkit-box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.0);
+    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.0)
+ }
+}
+.page{
+    max-width: 900px;
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0 auto; 
+}
+.calculator{
+    max-width: 400px;
+    min-width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+}
+.calculator__display{
+    width: 100%;
+    height: 20%;
+    background: black;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.calculator__display-text{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 50px;
+
+}
+.calculator__button-container{
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, 20%);
+}
+.calculator__button{
+    font-size: 60px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    padding: 0;
+    margin: 0;
+    background-color:rgb(196, 196, 196);
+}
+.calculator__button:focus{
+    animation-name: button-press;
+    animation-duration: 0.5s;
+}
+.calculator__button:hover{
+    -moz-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3)
+}
+.calculator__button:nth-of-type(1){
+    grid-column: span 2;
+}
+.calculator__button:nth-of-type(3){
+    background-color: rgb(223, 151, 76);
+    color: white;
+}
+.calculator__button:nth-of-type(7){
+    background-color: rgb(223, 151, 76);
+    color: white;
+}
+.calculator__button:nth-of-type(11){
+    background-color: rgb(223, 151, 76);
+    color: white;
+}
+.calculator__button:nth-of-type(15){
+    background-color: rgb(223, 151, 76);
+    color: white;
+}
+.calculator__button:nth-of-type(17){
+    background-color: rgb(223, 151, 76);
+    color: white;
+}
+.calculator__button:nth-of-type(16){
+    grid-column: span 3;
+}
